@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - VIKS Animation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<!-- NAVBAR SECTION
+==========================================================-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-viks="fade-right">
+                <i class="fas fa-code"></i>  VIKS ANIMATION
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" data-viks="fade-down" data-viks-delay="100">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item" data-viks="fade-down" data-viks-delay="200">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" data-viks="fade-down" data-viks-delay="300">
+                        <a class="nav-link" href="#examples">Examples</a>
+                    </li>
+                    <li class="nav-item" data-viks="fade-down" data-viks-delay="400">
+                        <a class="nav-link" href="#documentation">Docs</a>
+                    </li>
+                    <li class="nav-item" data-viks="fade-down" data-viks-delay="500">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <div class="container py-5 mt-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="docs-sidebar">
+                    <h5>Getting Started</h5>
+                    <ul class="docs-nav">
+                        <li><a href="#installation" class="active">Installation</a></li>
+                        <li><a href="#basic-usage">Basic Usage</a></li>
+                        <li><a href="#configuration">Configuration</a></li>
+                    </ul>
+
+                    <h5 class="mt-4">Animations</h5>
+                    <ul class="docs-nav">
+                        <li><a href="#fade">Fade Animations</a></li>
+                        <li><a href="#slide">Slide Animations</a></li>
+                        <li><a href="#zoom">Zoom Animations</a></li>
+                        <li><a href="#flip">Flip Animations</a></li>
+                    </ul>
+
+                    <h5 class="mt-4">Advanced</h5>
+                    <ul class="docs-nav">
+                        <li><a href="#options">Animation Options</a></li>
+                        <li><a href="#callbacks">Callbacks</a></li>
+                        <li><a href="#api">API Reference</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div class="docs-content">
+                    <!-- Installation Section -->
+                    <section class="docs-section" id="installation">
+                        <h2>Installation</h2>
+                        <p>Get started with VIKS Animation by including it via CDN or installing through npm.</p>
+
+                        <h3>CDN Links</h3>
+                        <div class="code-block">
+                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            <code>&lt;link href="https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.css" rel="stylesheet"&gt;</code>
+                        </div>
+                        <div class="code-block">
+                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            <code>&lt;script src="https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.js"&gt;&lt;/script&gt;</code>
+                        </div>
+
+                        <h3>NPM Installation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            <code>npm install viks-animation</code>
+                        </div>
+                    </section>
+
+                    <!-- Basic Usage Section -->
+                    <section class="docs-section" id="basic-usage">
+                        <h2>Basic Usage</h2>
+                        <p>Add animations to your elements using data attributes.</p>
+
+                        <div class="custom-alert">
+                            <i class="fas fa-info-circle"></i>
+                            Make sure to initialize VIKS after the DOM is loaded.
+                        </div>
+
+                        <h3>Example</h3>
+                        <div class="code-block">
+                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            <code>&lt;div data-viks="fade-up"&gt;
+    This element will fade up
+&lt;/div&gt;</code>
+                        </div>
+
+                        <h3>Initialize VIKS</h3>
+                        <div class="code-block">
+                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            <code>&lt;script&gt;
+    VIKS.init();
+&lt;/script&gt;</code>
+                        </div>
+                    </section>
+
+                    <!-- Animation Options Section -->
+                    <section class="docs-section" id="options">
+                        <h2>Animation Options</h2>
+                        <p>Customize your animations with these available options:</p>
+
+                        <table class="props-table">
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Values</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data-viks-delay</td>
+                                    <td>number (ms)</td>
+                                    <td>Delays the animation start time</td>
+                                </tr>
+                                <tr>
+                                    <td>data-viks-duration</td>
+                                    <td>number (ms)</td>
+                                    <td>Sets the animation duration</td>
+                                </tr>
+                                <tr>
+                                    <td>data-viks-once</td>
+                                    <td>true/false</td>
+                                    <td>Whether to repeat the animation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- SCRIPT BOOTSTRAP.JS , CUSTOM.JS ,VIKS ANIMATION.JS
+======================================================================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.js"></script>
+<script src="src/assets/js/custom.js"></script>
+</body>
+</html>
