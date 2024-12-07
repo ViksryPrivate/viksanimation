@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-
+<!-- Loading Screen -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
 
 
 <!-- NAVBAR SECTION
 ==========================================================-->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#" data-viks="fade-right">
-                  VIKS ANIMATION
-            </a>
+            <a class="navbar-brand" href="#" data-viks="fade-right">  VIKS ANIMATION</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,35 +50,29 @@
     
     <!-- HERO SECTION
     =================================================================================-->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="container">
             <div class="row min-vh-100 align-items-center">
                 <div class="col-12 col-lg-10 mx-auto text-center">
                     <!-- Button trigger modal -->
-                <a href="#" class="Get-animation text-decoration-none" data-bs-toggle="modal" data-bs-target="#qrModal">
+                <a href="#" class="Get-animation text-decoration-none" data-viks="flip-up delay-200" data-bs-toggle="modal" data-bs-target="#qrModal">
                     Say Thank You<i class="fas fa-arrow-right ms-2"></i>
                 </a>
                     
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-viks="fade-down delay-300">
                         Smooth and lively <br>
                         for the web
                     </h1>
                     
-                    <p class="hero-description mx-auto">
-                        A lightweight JavaScript library for creating smooth and engaging scroll animations that enhance user experience and interactivity.
+                    <p class="hero-description mx-auto" data-viks="fade-down delay-400">
+                        A lightweight JavaScript library for creating smooth and engaging scroll animations that enhance user experience and interactivity.Friendly for new developers.
                     </p>
                     
                     
                     
-                    <a href="read-the-docs.html" class="btn btn-outline-light">
+                    <a href="read-the-docs.html" class="btn btn-outline-light" data-viks="fade-down delay-500">
                         <i class="fas fa-book me-2"></i>Read the docs
                     </a>
-                    
-                    <div class="version-info mt-3">
-                        Currently v1.0.0 · 
-                        <a href="#">Download</a> · 
-                        <a href="#">All releases</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -97,14 +92,14 @@
                     <!-- Bitcoin QR Section -->
                     <div class="qr-section">
                         <h6 class="qr-title">
-                            <i class="fab fa-bitcoin me-2"></i>Bitcoin Donation
+                            <i class="fab fa-bitcoin me-2"></i>BitcoinCash
                         </h6>
                         <div class="qr-container text-center">
-                            <img src="src/assets/img/qr/bitcoin-qr.png" alt="Bitcoin QR Code" class="qr-image" id="bitcoinQR">
+                            <img src="./src/assets/img/qr/bitcoin-qr.jpg" alt="Bitcoin QR Code" class="qr-image" id="bitcoinQR">
                             <div>
-                                <a href="src/assets/img/qr/bitcoin-qr.png" download="bitcoin-qr.png" class="btn-download">
+                                <a href="./src/assets/img/qr/bitcoin-qr.jpg" download="bitcoin-qr.png" class="btn-download">
                                     <i class="fas fa-download"></i>
-                                    Download Bitcoin QR
+                                    Download BitcoinCash QR
                                 </a>
                             </div>
                         </div>
@@ -113,14 +108,14 @@
                     <!-- DANA QR Section -->
                     <div class="qr-section">
                         <h6 class="qr-title">
-                            <i class="fas fa-wallet me-2"></i>DANA Payment
+                            <i class="fas fa-wallet me-2"></i>QRIS
                         </h6>
                         <div class="qr-container text-center">
-                            <img src="src/assets/img/qr/dana-qr.png" alt="DANA QR Code" class="qr-image" id="danaQR">
+                            <img src="./src/assets/img/qr/dana-qr.jpg" alt="DANA QR Code" class="qr-image" id="danaQR">
                             <div>
-                                <a href="src/assets/img/qr/dana-qr.png" download="dana-qr.png" class="btn-download">
+                                <a href="./src/assets/img/qr/dana-qr.jpg" download="dana-qr.png" class="btn-download">
                                     <i class="fas fa-download"></i>
-                                    Download DANA QR
+                                    Download QRIS
                                 </a>
                             </div>
                         </div>
@@ -186,23 +181,35 @@
     ==========================================================-->
     <div class="container">
         <div class="installation-section" id="installation">
-            <h2 class="section-title">GET IT</h2>
+            <h2 class="section-title" data-viks="flip-left delay-100">GET IT</h2>
             
             <div class="get-it-buttons text-center">
-                <a href="#" class="btn btn-outline-light btn-lg btn-block">Download</a>
-                <a href="#" class="btn btn-outline-light btn-lg btn-block">View on github</a>
+                <a href="https://github.com/Vixsry/viks-animation/archive/refs/heads/main.zip" class="btn btn-outline-light btn-lg btn-block" data-viks="fade-right delay-200">Download</a>
+                <a href="https://github.com/Vixsry/viks-animation" class="btn btn-outline-light btn-lg btn-block" data-viks="fade-left delay-300">View on github</a>
+            </div>
+            
+            <h2 class="section-title mt-5" data-viks="flip-right delay-200">NPM &amp; YARN INSTALLATION</h2>
+            <h3 class="subsection-title" data-viks="fade-right delay-300"> <i class="fa-brands fa-npm"></i>  NPM</h3>
+            <div class="code-block" data-viks="fade-up delay-400">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                <code>npm install viks-animation --save</code>
+            </div>
+            
+            <h3 class="subsection-title" data-viks="fade-right delay-300"><i class="fa-brands fa-yarn"></i>  YARN</h3>
+            <div class="code-block" data-viks="fade-up delay-400">
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                <code>npm install viks-animation --save</code>
             </div>
 
-            <h2 class="section-title mt-5">CDN SOURCES</h2>
-            
-            <h3 class="subsection-title">CSS</h3>
-            <div class="code-block">
+            <h2 class="section-title mt-5" data-viks="flip-right delay-200"><i class="fab fa-cdn"></i>  CDN SOURCES</h2>
+            <h3 class="subsection-title" data-viks="fade-right delay-300"><i class="fab fa-css3"></i>  CSS</h3>
+            <div class="code-block" data-viks="fade-up delay-400">
                 <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
                 <code>&lt;link <span class="attribute">href</span>=<span class="value">"https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</code>
             </div>
             
-            <h3 class="subsection-title">JS</h3>
-            <div class="code-block">
+            <h3 class="subsection-title" data-viks="fade-right delay-400"><i class="fa-brands fa-js"></i>  JS</h3>
+            <div class="code-block" data-viks="flip-right delay-500">
                 <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
                 <code>&lt;script <span class="attribute">src</span>=<span class="value">"https://cdn.jsdelivr.net/gh/Vixsry/viks-animation@latest/dist/viks.min.js"</span>&gt;&lt;/script&gt;</code>
             </div>
@@ -217,25 +224,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5>About Us</h5>
-                    <p>A modern JavaScript animation library designed to create smooth, lightweight, and customizable scroll animations for various web applications. Built with a focus on simplicity and efficiency, this library delivers an optimal experience without compromising performance.</p>
+                    <h5 data-viks="fade-up delay-100">About Us</h5>
+                    <p data-viks="flip-up delay-200">A modern JavaScript animation library designed to create smooth, lightweight, and customizable scroll animations for various web applications. Built with a focus on simplicity and efficiency, this library delivers an optimal experience without compromising performance.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-facebook" data-viks="fade-up delay-100"></i></a>
+                        <a href="#"><i class="fab fa-twitter" data-viks="fade-down delay-200"></i></a>
+                        <a href="#"><i class="fab fa-instagram" data-viks="fade-up delay-300"></i></a>
+                        <a href="#"><i class="fab fa-github" data-viks="fade-down delay-400"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 footer-links">
+                <div class="col-md-4 mb-4 footer-links" data-viks="flip-right delay-100">
                     <h5>Quick Links</h5>
                     <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="read-the-docs.html"><i class="fas fa-chevron-right"></i> Documentation</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Examples</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Download</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4 footer-links">
+                <div class="col-md-4 mb-4 footer-links" data-viks="fade-up delay-200">
                     <h5>Useful Links</h5>
                     <ul>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
@@ -243,6 +250,15 @@
                         <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
+                </div>
+            </div>
+            <!-- Copyright Section -->
+            <div class="copyright-section" data-viks="fade-up delay-300">
+                <hr class="divider">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2024 Viks Animation. All Rights Reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,23 +286,6 @@
 ======================================================================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="src/assets/js/custom.js"></script>
-<script>
- document.addEventListener('DOMContentLoaded', function() {
-    const baseUrl = window.location.origin;
-    const bitcoinQR = document.getElementById('bitcoinQR');
-    const danaQR = document.getElementById('danaQR');
-    const downloadBtns = document.querySelectorAll('.btn-download');
-    
-    // Update image sources
-    bitcoinQR.src = baseUrl + 'src/assets/img/qr/bitcoin-qr.png';
-    danaQR.src = baseUrl + 'src/assets/img/qr/dana-qr.png';
-    
-    // Update download links
-    downloadBtns[0].href = baseUrl + 'src/assets/img/qr/bitcoin-qr.png';
-    downloadBtns[1].href = baseUrl + 'src/assets/img/qr/dana-qr.png';
-});
-    
-  VIKS.init();
-</script>
+
 </body>
 </html>
